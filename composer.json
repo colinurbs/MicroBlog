@@ -1,0 +1,8 @@
+{
+    "require": {
+        "slim/slim": "2.*",
+        "sunra/php-simple-html-dom-parser": "v1.5.0",
+        "erusev/parsedown": "dev-master",
+        "twbs/bootstrap": "3.3.*@dev"
+    }
+}
