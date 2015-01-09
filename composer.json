@@ -2,7 +2,6 @@
     "require": {
         "slim/slim": "2.*",
         "erusev/parsedown": "dev-master",
-        "twbs/bootstrap": "3.3.*@dev",
-        "jeremykendall/slim-auth": "*"
+        "twbs/bootstrap": "3.3.*@dev"
     }
 }
