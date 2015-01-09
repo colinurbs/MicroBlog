@@ -2,31 +2,25 @@
 require 'vendor/autoload.php';
 use Sunra\PhpSimple\HtmlDomParser;
 
+
+
 $app = new \Slim\Slim(array(
     'templates.path' => './templates'
 ));
 
 // home
 $app->get('/', function () use ($app) {
+		$blog_title = "Yurt Life";
 		$data = json_decode(file_get_contents("posts.json"));
-		$app->render('home.php', array('posts' => $data));
+		$app->render('home.php', array('blog_title'=> $blog_title,'posts' => $data));
 })->name("home");
 
 //new item processing
 $app->post('/new', function () use ($app) {
 	$data = json_decode(file_get_contents("posts.json"));
-
-	$doc = new DOMDocument();
-	@$doc->loadHTMLFile($_POST['link']);
-	$xpath = new DOMXPath($doc);
-	$title = $xpath->query('//title')->item(0)->nodeValue."\n";
+	$parse = new Parsedown();
+	$data[] = array('content'=>$parse->text($_POST['content']), 'date'=> date('m/y/d'), 'title'=>$_POST['title']);
 	
-	$meta = get_meta_tags ($_POST['link']);
-
-	if (!isset($meta['description'])){
-		$meta['description']="";
-	}
-	$data[] = array('link'=> $_POST['link'], 'comment'=> $_POST['comment'], 'title'=> $title, 'description' =>$meta['description']);
 	$fp = fopen('posts.json', 'w');
 	fwrite($fp, json_encode($data));
 	fclose($fp);

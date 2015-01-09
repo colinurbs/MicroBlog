@@ -3,17 +3,41 @@
 		<head>
 			<meta charset="utf-8"/>
 			<title>Slim Framework for PHP 5</title>
-			<link type="text/css" rel="stylesheet" href="style.css">	
+			<link type="text/css" rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap.css">
+			<link type="text/css" rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap-theme.css">		
 		<body>
 		<div class="main-nav">
 		<a href="/">Home</a>
 		</div>
 		<div class="container">
-			<div class="post">
+			<div class="row">
+				<pre>
+				A First Level Header
+				====================
+
+				A Second Level Header
+				---------------------
+
+				Now is the time for all good men to come to
+				the aid of their country. This is just a
+				regular paragraph.
+
+				The quick brown fox jumped over the lazy
+				dog's back.
+
+				### Header 3
+
+				> This is a blockquote.
+				> 
+				> This is the second paragraph in the blockquote.
+				>
+				> ## This is an H2 in a blockquote
+				</pre>
 				<h2>New Post</h2>
 				<form action="/new" method ="post">
-				   <label>Link</br><input id="link" name ="link" type="text"></input></label></br>
-					<label>Comment</br><input id="comment" name="comment" type="text"></input><span style="color:#ccc;"> optional</span></label>
+				<input type="text" name="title" id="title"/>
+				 <textarea id="content" name="content" cols="86" rows ="20"></textarea>
+					
 					</br>
 					<input type="submit" value="Submit"/>
 				 </form>
