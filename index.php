@@ -2,8 +2,6 @@
 require 'vendor/autoload.php';
 use Sunra\PhpSimple\HtmlDomParser;
 
-
-
 $app = new \Slim\Slim(array(
     'templates.path' => './templates'
 ));
