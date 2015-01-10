@@ -19,7 +19,7 @@ $app->get('/', function () use ($app) {
 $app->post('/new', function () use ($app) {
 	$data = json_decode(file_get_contents("posts.json"));
 	$parse = new Parsedown();
-	$data[] = array('content'=>$parse->text($_POST['content']), 'date'=> date('m/y/d'), 'title'=>$_POST['title']);
+	$data[] = array('id'=>count($data)+1, 'content'=>$parse->text($_POST['content']), 'date'=> date('m/y/d'), 'title'=>$_POST['title']);
 	
 	$fp = fopen('posts.json', 'w');
 	fwrite($fp, json_encode($data));
@@ -28,16 +28,14 @@ $app->post('/new', function () use ($app) {
 	});
 
 //delete
-$app->get('/delete/:link+', function ($link) use ($app) {
-	if(is_array($link)){
-		$link = implode("/", $link);
-	}
-	echo $link;
+$app->get('/delete/:id+', function ($id) use ($app) {
+	
 	$data = json_decode(file_get_contents("posts.json"));
 	$temp = array();
-
+	error_log($id[0]);
 	foreach ($data as $post) {
-		if($post->link !== $link){
+		if($post->id != $id[0]){
+			error_log($post->id);
 			$temp[] = $post;
 		}
 	}

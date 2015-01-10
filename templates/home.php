@@ -8,7 +8,6 @@
 			<link type="text/css" rel="stylesheet" href="/vendor/twbs/bootstrap/dist/css/bootstrap-theme.css">	
 		<body>
 		<div class="main-nav">
-		<a class="btn btn-small" href="/new">New</a>
 		</div>
 		<div class="container">
 			<div class="row">

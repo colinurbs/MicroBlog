@@ -14,11 +14,15 @@
 				foreach($posts as $post){
 				
 			
-				echo "<hr/><div class=\"posts\">";
-					echo "<a href=\"/edit/".$post->date."\">Edit</a>&nbsp|&nbsp";
-					echo "<a href=\"/delete/".$post->date."\">Delete</a>";
+
+				
+				echo "<div class=\"posts col-md-12\">";
+
+						echo "<h1>".$post->title."</h1><hr style=\"position:relative; top:-20px;\"/>";
+							echo "<a href=\"/edit/".$post->id."\">Edit</a>&nbsp|&nbsp";
+					echo "<a href=\"/delete/".$post->id."\">Delete</a>";
 						 echo $post->content;
-				echo "</div>";
+						 echo "<div style=\"color:#ccc;font-size:14px;display:inline;\" class=\"date\">posted".$post->date."</div></div>";
 			}
 		
 		?>
