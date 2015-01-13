@@ -4,7 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8a1410a6b91069e45dc253b2d82342bd",
+    "hash": "ac0076d10822936034c2e01a3b244d3e",
     "packages": [
         {
             "name": "erusev/parsedown",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/erusev/parsedown.git",
-                "reference": "7d3af6bf8300d8d53050569940a20021f74029b4"
+                "reference": "0d288083922576bcd55389bcf1cd8ac1db7adaa7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/erusev/parsedown/zipball/7d3af6bf8300d8d53050569940a20021f74029b4",
-                "reference": "7d3af6bf8300d8d53050569940a20021f74029b4",
+                "url": "https://api.github.com/repos/erusev/parsedown/zipball/0d288083922576bcd55389bcf1cd8ac1db7adaa7",
+                "reference": "0d288083922576bcd55389bcf1cd8ac1db7adaa7",
                 "shasum": ""
             },
             "type": "library",
@@ -43,7 +43,7 @@
                 "markdown",
                 "parser"
             ],
-            "time": "2015-01-08 22:08:14"
+            "time": "2015-01-12 21:24:13"
         },
         {
             "name": "slim/slim",
@@ -90,49 +90,6 @@
                 "router"
             ],
             "time": "2014-12-09 19:59:29"
-        },
-        {
-            "name": "sunra/php-simple-html-dom-parser",
-            "version": "v1.5.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
-                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/a0b80ace086c7e09085669205e1b3c2c9c7a453c",
-                "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-0": {
-                    "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Sunra",
-                    "email": "sunra@yandex.ru",
-                    "homepage": "http://github.com/sunra"
-                }
-            ],
-            "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
-            "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
-            "keywords": [
-                "dom",
-                "html",
-                "parser"
-            ],
-            "time": "2013-05-04 14:32:03"
         },
         {
             "name": "twbs/bootstrap",

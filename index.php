@@ -33,7 +33,7 @@ $app->post('/new', function () use ($app) {
 	$parse = new Parsedown();
 
 	$data[] = array('id'=>count($data)+1, 'content'=>$parse->text($_POST['content']), 'date'=> date('m/y/d'), 'title'=>$_POST['title']);
-
+	//oerder data by array
 	$fp = fopen('posts.json', 'w');
 	fwrite($fp, json_encode($data));
 	fclose($fp);

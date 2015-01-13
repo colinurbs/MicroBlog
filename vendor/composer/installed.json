@@ -48,92 +48,6 @@
         ]
     },
     {
-        "name": "sunra/php-simple-html-dom-parser",
-        "version": "v1.5.0",
-        "version_normalized": "1.5.0.0",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/sunra/php-simple-html-dom-parser.git",
-            "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/sunra/php-simple-html-dom-parser/zipball/a0b80ace086c7e09085669205e1b3c2c9c7a453c",
-            "reference": "a0b80ace086c7e09085669205e1b3c2c9c7a453c",
-            "shasum": ""
-        },
-        "require": {
-            "php": ">=5.3.2"
-        },
-        "time": "2013-05-04 14:32:03",
-        "type": "library",
-        "installation-source": "dist",
-        "autoload": {
-            "psr-0": {
-                "Sunra\\PhpSimple\\HtmlDomParser": "Src/"
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Sunra",
-                "email": "sunra@yandex.ru",
-                "homepage": "http://github.com/sunra"
-            }
-        ],
-        "description": "Composer adaptation of: A HTML DOM parser written in PHP5+ let you manipulate HTML in a very easy way! Require PHP 5+. Supports invalid HTML. Find tags on an HTML page with selectors just like jQuery. Extract contents from HTML in a single line.",
-        "homepage": "https://github.com/sunra/php-simple-html-dom-parser",
-        "keywords": [
-            "dom",
-            "html",
-            "parser"
-        ]
-    },
-    {
-        "name": "erusev/parsedown",
-        "version": "dev-master",
-        "version_normalized": "9999999-dev",
-        "source": {
-            "type": "git",
-            "url": "https://github.com/erusev/parsedown.git",
-            "reference": "7d3af6bf8300d8d53050569940a20021f74029b4"
-        },
-        "dist": {
-            "type": "zip",
-            "url": "https://api.github.com/repos/erusev/parsedown/zipball/7d3af6bf8300d8d53050569940a20021f74029b4",
-            "reference": "7d3af6bf8300d8d53050569940a20021f74029b4",
-            "shasum": ""
-        },
-        "time": "2015-01-08 22:08:14",
-        "type": "library",
-        "installation-source": "source",
-        "autoload": {
-            "psr-0": {
-                "Parsedown": ""
-            }
-        },
-        "notification-url": "https://packagist.org/downloads/",
-        "license": [
-            "MIT"
-        ],
-        "authors": [
-            {
-                "name": "Emanuil Rusev",
-                "email": "hello@erusev.com",
-                "homepage": "http://erusev.com"
-            }
-        ],
-        "description": "Parser for Markdown.",
-        "homepage": "http://parsedown.org",
-        "keywords": [
-            "markdown",
-            "parser"
-        ]
-    },
-    {
         "name": "twbs/bootstrap",
         "version": "dev-master",
         "version_normalized": "9999999-dev",
@@ -184,6 +98,47 @@
             "mobile-first",
             "responsive",
             "web"
+        ]
+    },
+    {
+        "name": "erusev/parsedown",
+        "version": "dev-master",
+        "version_normalized": "9999999-dev",
+        "source": {
+            "type": "git",
+            "url": "https://github.com/erusev/parsedown.git",
+            "reference": "0d288083922576bcd55389bcf1cd8ac1db7adaa7"
+        },
+        "dist": {
+            "type": "zip",
+            "url": "https://api.github.com/repos/erusev/parsedown/zipball/0d288083922576bcd55389bcf1cd8ac1db7adaa7",
+            "reference": "0d288083922576bcd55389bcf1cd8ac1db7adaa7",
+            "shasum": ""
+        },
+        "time": "2015-01-12 21:24:13",
+        "type": "library",
+        "installation-source": "source",
+        "autoload": {
+            "psr-0": {
+                "Parsedown": ""
+            }
+        },
+        "notification-url": "https://packagist.org/downloads/",
+        "license": [
+            "MIT"
+        ],
+        "authors": [
+            {
+                "name": "Emanuil Rusev",
+                "email": "hello@erusev.com",
+                "homepage": "http://erusev.com"
+            }
+        ],
+        "description": "Parser for Markdown.",
+        "homepage": "http://parsedown.org",
+        "keywords": [
+            "markdown",
+            "parser"
         ]
     }
 ]
