@@ -9,7 +9,7 @@
 			<h2>New Post</h2>
 			<form action="/new" method ="post">
 			<label>Title<br /><input type="text" name="title" id="title"/></label><br/>
-			 <label>Content<br /><textarea id="content" name="content" cols="86" rows ="20"></textarea></label>
+			<label>Content<br /><textarea id="content" name="content" cols="86" rows ="20"></textarea></label>
 				
 				</br>
 				<input type="submit" value="Submit"/>

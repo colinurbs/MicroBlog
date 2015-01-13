@@ -2,19 +2,21 @@
 require 'vendor/autoload.php';
 use Sunra\PhpSimple\HtmlDomParser;
 
-
 $app = new \Slim\Slim(array(
 	'templates.path' => './templates'
 ));
 
+
 // home
 $app->get('/', function () use ($app) {
 
-	
 	$data = json_decode(file_get_contents("posts.json"));
+	error_log("here");
 	$app->render('home.php', array('posts' => $data));
 })->name("home");
 
+
+//single
 $app->get('/single/:id+', function ($id) use ($app) {
 	$data = json_decode(file_get_contents("posts.json"));
 	foreach($data as $post){
@@ -36,16 +38,15 @@ $app->post('/new', function () use ($app) {
 	fwrite($fp, json_encode($data));
 	fclose($fp);
 	$app->response->redirect($app->urlFor('home'), 303);
-	});
+});
+
 
 //delete
-
 $app->get('/delete/:id+', function ($id) use ($app) {
 	$data = json_decode(file_get_contents("posts.json"));
 	$temp = array();
 	foreach ($data as $post) {
 		if($post->id != $id[0]){
-
 			$temp[] = $post;
 		}
 	}
@@ -55,17 +56,17 @@ $app->get('/delete/:id+', function ($id) use ($app) {
 	$app->response->redirect($app->urlFor('admin'), 303);
 });
 
+
 //admin view
 $app->get('/admin', function () use ($app) {
 	$data = json_decode(file_get_contents("posts.json"));
 	$app->render('admin.php', array('posts' => $data));
-
 })->name("admin");
+
 
 //new item form
 $app->get('/new', function () use ($app) {
 	$app->render('new.php');
-
 });
 
 
